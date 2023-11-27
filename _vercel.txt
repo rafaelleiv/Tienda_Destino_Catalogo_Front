@@ -1,0 +1,1 @@
+vc-domain-verify=www.tiendadestino.cat.com,a9297c515c03b5e241d5
