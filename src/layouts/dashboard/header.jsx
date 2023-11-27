@@ -13,9 +13,8 @@ import { bgBlur } from 'src/theme/css';
 
 import Iconify from 'src/components/iconify';
 
+import { HEADER } from './config-layout';
 import Searchbar from './common/searchbar';
-import { NAV, HEADER } from './config-layout';
-import AccountPopover from './common/account-popover';
 import LanguagePopover from './common/language-popover';
 import NotificationsPopover from './common/notifications-popover';
 
@@ -24,7 +23,7 @@ import NotificationsPopover from './common/notifications-popover';
 export default function Header({ onOpenNav }) {
   const theme = useTheme();
 
-  const lgUp = useResponsive('up', 'lg');
+  const lgUp = useResponsive('up', 'xl');
 
   const renderContent = (
     <>
@@ -41,7 +40,7 @@ export default function Header({ onOpenNav }) {
       <Stack direction="row" alignItems="center" spacing={1}>
         <LanguagePopover />
         <NotificationsPopover />
-        <AccountPopover />
+        {/* <AccountPopover /> */}
       </Stack>
     </>
   );
@@ -59,7 +58,7 @@ export default function Header({ onOpenNav }) {
           duration: theme.transitions.duration.shorter,
         }),
         ...(lgUp && {
-          width: `calc(100% - ${NAV.WIDTH + 1}px)`,
+          // width: `calc(100% - ${NAV.WIDTH + 1}px)`,
           height: HEADER.H_DESKTOP,
         }),
       }}
